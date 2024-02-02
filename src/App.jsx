@@ -1,12 +1,10 @@
-import './App.css'
+import "./app.css"
 
 function App() {
   return (
-    <>
-      <div>
-        <h1>Portfolio Website</h1>
-      </div>
-    </>
+    <h1 className="hello">
+      Hello world!
+    </h1>
   )
 }
 
