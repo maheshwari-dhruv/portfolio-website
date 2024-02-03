@@ -13,10 +13,10 @@ module.exports = {
   plugins: ["react-refresh"],
   rules: {
     "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
-    indent: ["error", 2],
-    "linebreak-style": ["error", "unix"],
-    quotes: ["error", "single"],
-    semi: ["error", "off"],
+    // indent: ["error", 2],
+    // "linebreak-style": ["error", "unix"],
+    // quotes: ["error", "single"],
+    semi: ["error", "always"],
     "react-refresh/only-export-components": [
       "warn",
       { allowConstantExport: true },
