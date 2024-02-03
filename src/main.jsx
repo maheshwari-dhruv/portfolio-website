@@ -10,33 +10,33 @@ import { Projects } from "@pages/projects-page.jsx";
 import { Error } from "@pages/error/error-page.jsx";
 
 const router = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <Error />,
+    children: [
+      {
         path: "/",
-        element: <App />,
-        errorElement: <Error />,
-        children: [
-            {
-                path: "/",
-                element: <Home />,
-            },
-            {
-                path: "/contact",
-                element: <Contact />,
-            },
-            {
-                path: "/about",
-                element: <About />,
-            },
-            {
-                path: "/projects",
-                element: <Projects />,
-            },
-        ],
-    },
+        element: <Home />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/projects",
+        element: <Projects />,
+      },
+    ],
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <React.StrictMode>
-        <RouterProvider router={router} />
-    </React.StrictMode>,
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>,
 );
