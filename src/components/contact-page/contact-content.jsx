@@ -1,5 +1,5 @@
+import { sendMail } from "@/api/contact-api";
 import ContactFormData from "@/models/contact-model";
-import axios from "axios";
 import { useState } from "react";
 
 export const ContactContent = () => {
@@ -19,12 +19,7 @@ export const ContactContent = () => {
     e.preventDefault();
     console.log("Form submitted:", contactData);
 
-    axios
-      .post("http://localhost:8080/api/v1/sendmail", contactData, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
+    sendMail(contactData)
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
 
