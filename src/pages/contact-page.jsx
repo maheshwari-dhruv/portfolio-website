@@ -1,5 +1,4 @@
 import { ContactContent } from "@/components/contact-page/contact-content";
-import "../styles/pages/contact-page.css";
 
 export const Contact = () => {
   return (
